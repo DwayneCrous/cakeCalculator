@@ -1,7 +1,8 @@
 #include <iostream>
 #include <algorithm> // For std::min
 
-int main() {
+int main()
+{
     std::string name;
     int eggsAmount, milkAmount, flourAmount;
     const int eggsMin = 1, milkMin = 200, flourMin = 100;
@@ -22,7 +23,8 @@ int main() {
     std::cin >> flourAmount;
 
     // Check if there are enough ingredients
-    if (eggsAmount < eggsMin || milkAmount < milkMin || flourAmount < flourMin) {
+    if (eggsAmount < eggsMin || milkAmount < milkMin || flourAmount < flourMin)
+    {
         std::cout << "Not enough ingredients, sadly you cannot make a cake 😢\n";
         return 0;
     }
@@ -37,9 +39,6 @@ int main() {
 
     // Display results
     std::cout << "\nYou can make " << smallest << " portions of cake\n";
-    std::cout << "You will need " << (smallest * eggsMin) << " eggs\n";
-    std::cout << "You will need " << (smallest * milkMin) << "ml of milk\n";
-    std::cout << "You will need " << (smallest * flourMin) << "g of flour\n\n";
     std::cout << "Cake calculator shutting down...\n";
 
     return 0;
